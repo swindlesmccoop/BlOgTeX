@@ -1,1 +1,2 @@
-Coming soon. Will require a bit of documentation.
+# BlOgTeX
+A blog that compiles LaTeX documents to HTML and creates an index in reverse-chronological order
