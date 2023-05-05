@@ -1,15 +1,13 @@
 #!/bin/sh
 
 #paths can be relative or absolute
-SOURCE="blog-tex"
-OUTPUT="blog"
-CSS="blog.css"
+SOURCE="/usr/share/blog-tex"
+OUTPUT="/usr/share/blog-html"
+#CSS="/css/blog.css"
+mkdir -p "$SOURCE" "$OUTPUT"
 
 #getting vars
-cd "$SOURCE" || {
-	printf "Error: directory does not exist.\n"
-	exit
-}
+cd "$SOURCE"
 TEXFILES="$(find . -name "*.tex")"
 
 #INTENSE STREAM MANIPULATION
@@ -20,7 +18,7 @@ rm *.4ct *.4tc *.aux *.dvi *.idv *.lg *.log *.tmp *.xref
 
 [ -f header.html ] || printf "Error: no header file present. Header files should contain everything for the blog index aside from the actual index of files.\n"
 cat header.html files.html > index.html && rm files.html
-printf '<link rel="stylesheet" href="blog.css">' | tee -a *.html > /dev/null
-cd ..
+printf '<link rel="stylesheet" href="/css/blog.css">' | tee -a *.html > /dev/null
+sed -i '$d' index.html header.html
 mv $SOURCE/*.html $SOURCE/*.css "$OUTPUT"
-cp "$OUTPUT/header.html" "$SOURCE"
+mv "$OUTPUT/header.html" "$SOURCE"
