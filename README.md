@@ -9,6 +9,11 @@ Edit the variables at the top of the script to point to your source `.tex` files
 
 You will need to have a `header.html` file in your `$SOURCE` directory. This is so when the script gets run and it gets the title, date, and filename of each file and creates an index, there is actually something doing things like creating a title for the page. Take a look at my example [header.html](blog-tex/header.html) so you can see what is required.
 
+You will also need a `header.xml` file in your `$SOURCE` directory. This should include everything that makes up the RSS feed aside from the actual contents. Once again, you can take a look at my example [header.xml](blog-tex/header.xml).
+
+### Formatting .tex files
+The only thing to keep in mind is that you need to use `MM/DD/YYYY` format for dates in the `.tex` files. When outputted to the RSS, they turn into `Day, DD Mon YYYY` for compatibility. If you have any issues with this, make an Issue and I'll make some sort of flag to change between formats.
+
 ## Things That Are Supported
 - Links
 - **Bold** and *Italic* text
@@ -21,4 +26,4 @@ You will need to have a `header.html` file in your `$SOURCE` directory. This is 
 
 ## To-do
 - [x] Fix sorting by date in index
-- [ ] Add RSS feed functionality
+- [x] Add RSS feed functionality
