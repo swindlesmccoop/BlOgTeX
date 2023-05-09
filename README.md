@@ -20,4 +20,4 @@ You will need to have a `header.html` file in your `$SOURCE` directory. This is 
 - Code syntax highlighting with `\usepackage{minted}`
 
 ## To-do
-[ ] Fix sorting by date in index
+- [x] Fix sorting by date in index
