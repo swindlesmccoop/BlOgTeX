@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="/css/rss.css"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Serial Experiments Linux</title>
+<description>Might not always have to do with Linux!</description>
+<language>en-us</language>
+<link>https://swindlesmccoop.xyz/rss.xml</link>
+<atom:link href="https://swindlesmccoop.xyz/rss.xml" rel="self" type="application/rss+xml" />
+
+<image>
+<title>Serial Experiments Linux</title>
+<url>https://swindlesmccoop.xyz/images/dalain.png</url>
+<link>https://swindlesmccoop.xyz/rss.xml</link>
+</image>
