@@ -18,7 +18,7 @@ egrep "date|title" -m 3 *.tex | sed -e 's/\\date{//; s/:/ /; s/}//; /maketitle/d
 
 for file in $TEXFILES; do
 	printf "Compiling \033[0;32m"$file".tex\033[0m\n"
-	pandoc "$file.tex" -f latex -t html -s -o "$OUTPUT/$file.html" --css=$CSS
+	pandoc "$file.tex" -f latex --webtex="https://latex.codecogs.com/svg.latex?" -t html -s -o "$OUTPUT/$file.html" --css=$CSS
 done
 
 cat $SOURCE/header.html $SOURCE/files.html > $OUTPUT/index.html
