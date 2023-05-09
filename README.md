@@ -21,3 +21,4 @@ You will need to have a `header.html` file in your `$SOURCE` directory. This is 
 
 ## To-do
 - [x] Fix sorting by date in index
+- [ ] Add RSS feed functionality
