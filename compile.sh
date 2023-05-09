@@ -38,7 +38,7 @@ for file in $DATED; do
 <guid>$BLOGURL/$file.html</guid>
 <pubDate>$PUBDATE</pubDate>
 <description><![CDATA[
-$(cat $OUTPUT/$file.html | sed 's/%/%%/g')
+$(cat $OUTPUT/$file.html | sed -e 's/%/%%/g; /<h1 class="title">/d; /<p class="date">/d')
 ]]></description>
 </item>
 " >> $OUTPUT/rss.xml
