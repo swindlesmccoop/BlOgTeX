@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  blogtex:
+    command: /root/prog/compile.sh
+    build: .
+    volumes:
+      - "./blog-tex:/usr/share/blog-tex"
+      - "./blog-html:/usr/share/blog-html"
+      - "./prog:/root/prog"
+    logging:
+      options:
+        max-size: 100m
