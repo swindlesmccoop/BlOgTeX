@@ -20,6 +20,8 @@ The only thing to keep in mind is that you need to use `MM/DD/YYYY` format for d
 - Links
 - **Bold** and *Italic* text
 - Images
+  - Resize using `\includegraphics[height=50px,keepaspectratio]{image}`
+  You can use either cm or px for the height. You can also use width, but I hate using it and do not recommend it.
 - Math
   - The math is generated using `latex.codecogs.com` which by default makes all of the math black. You can work around this by importing `\usepackage{xcolor}`, then using the `\color{}` tag (make sure to put a color between those {curly brackets}) to change it to a color that is readable. This was releavnt to me because the background of my blog is black, which made the math impossible to read.
   - Also, the reason that the math is done through CodeCogs is because a lot of the rendering of math simply cannot be done with plain HTML (see: fractions, sqrt, etc.) but CodeCogs provides a super quick way to do it that is *automatically handled by the script*, so your math equations will just werk.
